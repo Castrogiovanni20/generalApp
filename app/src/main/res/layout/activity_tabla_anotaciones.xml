@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="Jugador 2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tabla de anotaciones" />
+
+    <TableLayout
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:stretchColumns="3"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="30dp"
+        android:background="#f1f1f1">
+
+
+        <TableRow>
+            <TextView
+                android:layout_width="150dp"
+                android:text="" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:text="Jugador 1"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:gravity="center"
+                android:text="Jugador 2"
+                android:textStyle="bold"/>
+        </TableRow>
+
+
+        <TableRow>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/txtView_jug1_opc1"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtView_jug2_opc1"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:text="2" />
+
+            <TextView
+                android:id="@+id/txtView_jug1_opc2"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtView_jug2_opc2"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:text="3" />
+
+            <TextView
+                android:id="@+id/txtView_jug1_opc3"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtView_jug2_opc3"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:text="4" />
+
+            <TextView
+                android:id="@+id/txtView_jug1_opc4"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtView_jug2_opc4"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:text="5" />
+
+            <TextView
+                android:id="@+id/txtView_jug1_opc5"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtView_jug2_opc5"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:text="6" />
+
+            <TextView
+                android:id="@+id/txtView_jug1_opc6"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtView_jug2_opc6"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:text="Escalera" />
+
+            <TextView
+                android:id="@+id/txtView_jug1_escalera"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtView_jug2_escalera"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:text="Full" />
+
+            <TextView
+                android:id="@+id/txtView_jug1_full"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtView_jug2_full"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:text="Poker" />
+
+            <TextView
+                android:id="@+id/txtView_jug1_poker"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtView_jug2_poker"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:text="Generala" />
+
+            <TextView
+                android:id="@+id/txtView_jug1_generala"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtView_jug2_generala"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:paddingLeft="10dp"
+                android:text="Doble generala" />
+
+            <TextView
+                android:id="@+id/txtView_jug1_doble_generala"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtView_jug2_doble_generala"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#ffffff"
+                android:gravity="right"
+                android:text="" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#c0e5e1"
+                android:paddingLeft="10dp"
+                android:text="Total"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtView_jug1_total"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#c0e5e1"
+                android:gravity="right"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtView_jug2_total"
+                android:layout_width="100dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:background="#c0e5e1"
+                android:gravity="right"
+                android:text="" />
+        </TableRow>
+    </TableLayout>
+
+
+</LinearLayout>
