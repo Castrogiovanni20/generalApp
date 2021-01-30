@@ -30,6 +30,22 @@ public class OpcionesJugadas extends AppCompatActivity {
                 btn1.setText("20");
                 btn2.setText("25");
                 break;
+            case "full":
+                btn1.setText("30");
+                btn2.setText("35");
+                break;
+            case "poker":
+                btn1.setText("40");
+                btn2.setText("45");
+                break;
+            case "generala":
+                btn1.setText("50");
+                btn2.setText("55");
+                break;
+            case "doble_generala":
+                btn1.setText("100");
+                btn2.setText("105");
+                break;
         }
     }
 

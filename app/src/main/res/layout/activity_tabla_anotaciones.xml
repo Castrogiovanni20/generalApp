@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -16,15 +17,16 @@
         android:text="Tabla de anotaciones" />
 
     <TableLayout
-        android:layout_width="350dp"
-        android:layout_height="match_parent"
-        android:stretchColumns="3"
+        android:layout_width="353dp"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
         android:layout_marginVertical="30dp"
-        android:background="#f1f1f1">
+        android:background="#f1f1f1"
+        android:stretchColumns="3">
 
 
         <TableRow>
+
             <TextView
                 android:layout_width="150dp"
                 android:text="" />
@@ -35,17 +37,18 @@
                 android:gravity="center"
                 android:shadowColor="#000000"
                 android:text="Jugador 1"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="100dp"
                 android:gravity="center"
                 android:text="Jugador 2"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </TableRow>
 
 
         <TableRow>
+
             <TextView
                 android:layout_width="150dp"
                 android:layout_marginRight="1dp"
@@ -61,7 +64,8 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
 
             <TextView
                 android:id="@+id/txtView_jug2_opc1"
@@ -70,10 +74,13 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
         </TableRow>
 
         <TableRow>
+
             <TextView
                 android:layout_width="150dp"
                 android:layout_marginRight="1dp"
@@ -89,7 +96,9 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat"/>
 
             <TextView
                 android:id="@+id/txtView_jug2_opc2"
@@ -98,10 +107,14 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat"
+                />
         </TableRow>
 
         <TableRow>
+
             <TextView
                 android:layout_width="150dp"
                 android:layout_marginRight="1dp"
@@ -117,7 +130,9 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
 
             <TextView
                 android:id="@+id/txtView_jug2_opc3"
@@ -126,10 +141,13 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
         </TableRow>
 
         <TableRow>
+
             <TextView
                 android:layout_width="150dp"
                 android:layout_marginRight="1dp"
@@ -145,7 +163,9 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
 
             <TextView
                 android:id="@+id/txtView_jug2_opc4"
@@ -154,10 +174,13 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
         </TableRow>
 
         <TableRow>
+
             <TextView
                 android:layout_width="150dp"
                 android:layout_marginRight="1dp"
@@ -173,7 +196,9 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
 
             <TextView
                 android:id="@+id/txtView_jug2_opc5"
@@ -182,10 +207,13 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
         </TableRow>
 
         <TableRow>
+
             <TextView
                 android:layout_width="150dp"
                 android:layout_marginRight="1dp"
@@ -201,7 +229,9 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
 
             <TextView
                 android:id="@+id/txtView_jug2_opc6"
@@ -210,10 +240,13 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
         </TableRow>
 
         <TableRow>
+
             <TextView
                 android:layout_width="150dp"
                 android:layout_marginRight="1dp"
@@ -229,7 +262,9 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
 
             <TextView
                 android:id="@+id/txtView_jug2_escalera"
@@ -238,10 +273,13 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
         </TableRow>
 
         <TableRow>
+
             <TextView
                 android:layout_width="150dp"
                 android:layout_marginRight="1dp"
@@ -257,7 +295,9 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
 
             <TextView
                 android:id="@+id/txtView_jug2_full"
@@ -266,10 +306,13 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
         </TableRow>
 
         <TableRow>
+
             <TextView
                 android:layout_width="150dp"
                 android:layout_marginRight="1dp"
@@ -285,7 +328,9 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
 
             <TextView
                 android:id="@+id/txtView_jug2_poker"
@@ -294,10 +339,13 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
         </TableRow>
 
         <TableRow>
+
             <TextView
                 android:layout_width="150dp"
                 android:layout_marginRight="1dp"
@@ -313,7 +361,9 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
 
             <TextView
                 android:id="@+id/txtView_jug2_generala"
@@ -322,10 +372,13 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
         </TableRow>
 
         <TableRow>
+
             <TextView
                 android:layout_width="150dp"
                 android:layout_marginRight="1dp"
@@ -341,7 +394,9 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
 
             <TextView
                 android:id="@+id/txtView_jug2_doble_generala"
@@ -350,10 +405,13 @@
                 android:layout_marginBottom="1dp"
                 android:background="#ffffff"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
         </TableRow>
 
         <TableRow>
+
             <TextView
                 android:layout_width="150dp"
                 android:layout_marginRight="1dp"
@@ -361,7 +419,7 @@
                 android:background="#c0e5e1"
                 android:paddingLeft="10dp"
                 android:text="Total"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtView_jug1_total"
@@ -370,7 +428,9 @@
                 android:layout_marginBottom="1dp"
                 android:background="#c0e5e1"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
 
             <TextView
                 android:id="@+id/txtView_jug2_total"
@@ -379,9 +439,18 @@
                 android:layout_marginBottom="1dp"
                 android:background="#c0e5e1"
                 android:gravity="right"
-                android:text="" />
+                android:text=""
+                android:textAlignment="center"
+                tools:ignore="RtlCompat" />
         </TableRow>
     </TableLayout>
+
+    <Button
+        android:id="@+id/btnSumar"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="Sumar" />
 
 
 </LinearLayout>

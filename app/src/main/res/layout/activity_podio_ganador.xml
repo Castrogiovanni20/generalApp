@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="GANADORES"
+        android:textSize="35dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:fontFamily="sans-serif"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="35dp"
+        app:srcCompat="@drawable/trofeo" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Ganador 1 y Ganador 2"
+        android:textSize="35dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:fontFamily="sans-serif"/>
+
+
+</LinearLayout>

@@ -23,9 +23,27 @@ public class OpcionesNumericas extends AppCompatActivity {
         btn5 = findViewById(R.id.btn5);
 
         String opcion = getIntent().getExtras().getString("opcion");
+        String jugador = getIntent().getExtras().getString("jugador");
 
         setearValoresBotones(opcion);
 
+        enviarValor(btn1, opcion, jugador);
+        enviarValor(btn2, opcion, jugador);
+        enviarValor(btn3, opcion, jugador);
+        enviarValor(btn4, opcion, jugador);
+        enviarValor(btn5, opcion, jugador);
+
+    }
+
+    private void enviarValor(final Button button, final String opcion, final String jugador){
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), TablaAnotaciones.class);
+                intent.putExtra("valor_jug".concat(jugador).concat("_opc").concat(opcion), Integer.parseInt(button.getText().toString()));
+                startActivity(intent);
+            }
+        });
     }
 
     public void setearValoresBotones(String opcion){

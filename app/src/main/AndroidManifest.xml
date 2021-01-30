@@ -19,6 +19,7 @@
         <activity android:name=".TablaAnotaciones"/>
         <activity android:name=".OpcionesNumericas"/>
         <activity android:name=".OpcionesJugadas"/>
+        <activity android:name=".PodioGanador"/>
     </application>
 
 </manifest>
