@@ -3,18 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipChildren="?android:attr/windowOverscan"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:text="Jugador 2" />
+        android:layout_height="40dp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tabla de anotaciones" />
+        android:background="#FFFFFF"
+        android:text="Tabla de anotaciones"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     <TableLayout
         android:layout_width="353dp"
@@ -28,11 +31,11 @@
         <TableRow>
 
             <TextView
-                android:layout_width="150dp"
+                android:layout_width="98dp"
                 android:text="" />
 
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="75dp"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:shadowColor="#000000"
@@ -40,7 +43,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="40dp"
                 android:gravity="center"
                 android:text="Jugador 2"
                 android:textStyle="bold" />
@@ -98,7 +101,7 @@
                 android:gravity="right"
                 android:text=""
                 android:textAlignment="center"
-                tools:ignore="RtlCompat"/>
+                tools:ignore="RtlCompat" />
 
             <TextView
                 android:id="@+id/txtView_jug2_opc2"
@@ -109,8 +112,7 @@
                 android:gravity="right"
                 android:text=""
                 android:textAlignment="center"
-                tools:ignore="RtlCompat"
-                />
+                tools:ignore="RtlCompat" />
         </TableRow>
 
         <TableRow>
