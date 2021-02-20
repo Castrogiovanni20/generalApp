@@ -37,13 +37,22 @@ public class TablaAnotaciones extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabla_anotaciones);
 
-        if (getIntent().getExtras() != null){
+        if (getIntent().getExtras() != null) {
 
             //asignacion de valores en los arrays de cada jugador
             // Jugador 1
-            if ((getIntent().getExtras().getInt(("valor_jug1_opc1")) != 0)) {
-                Integer valor_jug1_opc1 = getIntent().getExtras().getInt("valor_jug1_opc1");
+
+            if (!(getIntent().getExtras().getString(("valor_jug1_opc1")).equalsIgnoreCase("0"))
+                    && (!getIntent().getExtras().getString(("valor_jug1_opc1")).equalsIgnoreCase("Tachar"))
+                    && (!getIntent().getExtras().getString(("valor_jug1_opc1")).equalsIgnoreCase("Borrar"))) {
+
+                Integer valor_jug1_opc1 = Integer.parseInt(getIntent().getExtras().getString(("valor_jug1_opc1")));
+
                 intArrayJug1[0] = valor_jug1_opc1;
+            } else if ((getIntent().getExtras().getString(("valor_jug1_opc1")).equalsIgnoreCase("Tachar"))) {
+                intArrayJug1[0] = -1;
+            } else if ((getIntent().getExtras().getString(("valor_jug1_opc1")).equalsIgnoreCase("Borrar"))) {
+                intArrayJug1[0] = 0;
             }
 
             if (getIntent().getExtras().getInt("valor_jug1_opc2") != 0) {
@@ -165,6 +174,16 @@ public class TablaAnotaciones extends AppCompatActivity {
                 intArrayJug2[11] = valor_jug2_total;
             }
         }
+
+        //TODO--------------------------------para deshabilitar botones--------------------
+
+//       if (!txtView_jug1_opc1.equals(null)){
+//           if(!txtView_jug1_opc1.getText().toString().equalsIgnoreCase("0")){
+//           txtView_jug1_opc1.setClickable(false);
+//            }
+//        }
+
+
 //--------------------------hasta aca----------------------------------------------
         //Boton sumar
         btnSumar = findViewById(R.id.btnSumar);
@@ -205,6 +224,10 @@ public class TablaAnotaciones extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), PodioGanador.class);
                 startActivity(intent);
+
+                //integer resultado = sumar(array);
+                //txtView_jug1_total.setText(resultado);
+
             }
         });
 
@@ -436,53 +459,55 @@ public class TablaAnotaciones extends AppCompatActivity {
 
         //Mapea el valor del array en el elemento del layout
         // Jug 1
-        if (intArrayJug1[0] != 0){
+        if (intArrayJug1[0] != 0 && intArrayJug1[0] != -1) {
             txtView_jug1_opc1.setText(String.valueOf(intArrayJug1[0]));
+        } else if (intArrayJug1[0] == -1) {
+            txtView_jug1_opc1.setText("X");
         }
 
-        if (intArrayJug1[1] != 0){
+        if (intArrayJug1[1] != 0) {
             txtView_jug1_opc2.setText(String.valueOf(intArrayJug1[1]));
         }
 
-        if (intArrayJug1[2] != 0){
+        if (intArrayJug1[2] != 0) {
             txtView_jug1_opc3.setText(String.valueOf(intArrayJug1[2]));
         }
 
-        if (intArrayJug1[3] != 0){
+        if (intArrayJug1[3] != 0) {
             txtView_jug1_opc4.setText(String.valueOf(intArrayJug1[3]));
         }
 
-        if (intArrayJug1[4] != 0){
+        if (intArrayJug1[4] != 0) {
             txtView_jug1_opc5.setText(String.valueOf(intArrayJug1[4]));
         }
 
-        if (intArrayJug1[5] != 0){
+        if (intArrayJug1[5] != 0) {
             txtView_jug1_opc6.setText(String.valueOf(intArrayJug1[5]));
         }
 
         //------------------A desde aca opcionesJugadas - jugador1-------------------------------------------------
 
-        if (intArrayJug1[6] != 0){
+        if (intArrayJug1[6] != 0) {
             txtView_jug1_escalera.setText(String.valueOf(intArrayJug1[6]));
         }
 
-        if (intArrayJug1[7] != 0){
+        if (intArrayJug1[7] != 0) {
             txtView_jug1_full.setText(String.valueOf(intArrayJug1[7]));
         }
 
-        if (intArrayJug1[8] != 0){
+        if (intArrayJug1[8] != 0) {
             txtView_jug1_poker.setText(String.valueOf(intArrayJug1[8]));
         }
 
-        if (intArrayJug1[9] != 0){
+        if (intArrayJug1[9] != 0) {
             txtView_jug1_generala.setText(String.valueOf(intArrayJug1[9]));
         }
 
-        if (intArrayJug1[10] != 0){
+        if (intArrayJug1[10] != 0) {
             txtView_jug1_doble_generala.setText(String.valueOf(intArrayJug1[10]));
         }
 
-        if (intArrayJug1[11] != 0){
+        if (intArrayJug1[11] != 0) {
             txtView_jug1_total.setText(String.valueOf(intArrayJug1[11]));
         }
 
@@ -490,58 +515,72 @@ public class TablaAnotaciones extends AppCompatActivity {
 
 
         // Jug 2
-        if (intArrayJug2[0] != 0){
+        if (intArrayJug2[0] != 0) {
             txtView_jug2_opc1.setText(String.valueOf(intArrayJug2[0]));
         }
 
-        if (intArrayJug2[1] != 0){
+        if (intArrayJug2[1] != 0) {
             txtView_jug2_opc2.setText(String.valueOf(intArrayJug2[1]));
         }
 
-        if (intArrayJug2[2] != 0){
+        if (intArrayJug2[2] != 0) {
             txtView_jug2_opc3.setText(String.valueOf(intArrayJug2[2]));
         }
 
-        if (intArrayJug2[3] != 0){
+        if (intArrayJug2[3] != 0) {
             txtView_jug2_opc4.setText(String.valueOf(intArrayJug2[3]));
         }
 
-        if (intArrayJug2[4] != 0){
+        if (intArrayJug2[4] != 0) {
             txtView_jug2_opc5.setText(String.valueOf(intArrayJug2[4]));
         }
 
-        if (intArrayJug2[5] != 0){
+        if (intArrayJug2[5] != 0) {
             txtView_jug2_opc6.setText(String.valueOf(intArrayJug2[5]));
         }
 
         //------------------A desde aca opcionesJugadas - jugador2-------------------------------------------------
 
-        if (intArrayJug2[6] != 0){
+        if (intArrayJug2[6] != 0) {
             txtView_jug2_escalera.setText(String.valueOf(intArrayJug2[6]));
         }
 
-        if (intArrayJug2[7] != 0){
+        if (intArrayJug2[7] != 0) {
             txtView_jug2_full.setText(String.valueOf(intArrayJug2[7]));
         }
 
-        if (intArrayJug2[8] != 0){
+        if (intArrayJug2[8] != 0) {
             txtView_jug2_poker.setText(String.valueOf(intArrayJug2[8]));
         }
 
-        if (intArrayJug2[9] != 0){
+        if (intArrayJug2[9] != 0) {
             txtView_jug2_generala.setText(String.valueOf(intArrayJug2[9]));
         }
 
-        if (intArrayJug2[10] != 0){
+        if (intArrayJug2[10] != 0) {
             txtView_jug2_doble_generala.setText(String.valueOf(intArrayJug2[10]));
         }
 
-        if (intArrayJug2[11] != 0){
+        if (intArrayJug2[11] != 0) {
             txtView_jug2_total.setText(String.valueOf(intArrayJug2[11]));
         }
 
 
-
     }
-
 }
+
+
+//---------------------------Metodo Sumar------------------------------------------------
+
+//    public int sumar(int[] array){
+//        int resultado=0;
+//        int i=0;
+//
+//        for (i=0; i<array.length; i++){
+//            if(array[i]!=-1) {
+//                resultado = resultado + array[i];
+//            }
+//        }
+//        return resultado;
+//    }
+
