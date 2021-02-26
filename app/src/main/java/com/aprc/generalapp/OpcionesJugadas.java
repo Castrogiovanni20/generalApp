@@ -33,26 +33,43 @@ public class OpcionesJugadas extends AppCompatActivity {
         //llamada al metodo:
         enviarValor(btn1, opcion, jugador);
         enviarValor(btn2, opcion, jugador);
-        //enviarValor(btn3, opcion, jugador);
-        //enviarValor(btn4, opcion, jugador);
+        enviarValor(btn3, opcion, jugador);
+        enviarValor(btn4, opcion, jugador);
     }
 
 
     //----------desde aca A-------------------------------------------------------------
 
     //metodo: al apretar el boton dentro de las opciones de puntaje
+
+// funcionaba sin cambiar las claves en string!
+//    private void enviarValor(final Button button, final String opcion, final String jugador){
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getApplicationContext(), TablaAnotaciones.class);
+//                intent.putExtra("valor_jug".concat(jugador).concat("_").concat(opcion), Integer.parseInt(button.getText().toString()));
+//
+//                //intent.putExtra("valor_jug".concat(jugador).concat("_opc").concat(opcion), Integer.parseInt(button.getText().toString()));
+//                startActivity(intent);
+//            }
+//        });
+//    }
+
+//agregado y modificado con claves string
     private void enviarValor(final Button button, final String opcion, final String jugador){
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), TablaAnotaciones.class);
-                intent.putExtra("valor_jug".concat(jugador).concat("_").concat(opcion), Integer.parseInt(button.getText().toString()));
-                //intent.putExtra("valor_jug".concat(jugador).concat("_opc").concat(opcion), Integer.parseInt(button.getText().toString()));
+               // intent.putExtra("valor_jug".concat(jugador).concat("_").concat(opcion), Integer.parseInt(button.getText().toString()));
+
+                intent.putExtra("valor_jug".concat(jugador).concat("_").concat(opcion), button.getText().toString());
+
                 startActivity(intent);
             }
         });
     }
-
 
 
     //--------------hasta aca A----------------------------------------------------
@@ -64,25 +81,33 @@ public class OpcionesJugadas extends AppCompatActivity {
             case "escalera":
                 btn1.setText("20");
                 btn2.setText("25");
+                btn3.setText("Tachar");
+                btn4.setText("Borrar");
                 break;
             case "full":
                 btn1.setText("30");
                 btn2.setText("35");
+                btn3.setText("Tachar");
+                btn4.setText("Borrar");
                 break;
             case "poker":
                 btn1.setText("40");
                 btn2.setText("45");
+                btn3.setText("Tachar");
+                btn4.setText("Borrar");
                 break;
             case "generala":
                 btn1.setText("50");
                 btn2.setText("55");
+                btn3.setText("Tachar");
+                btn4.setText("Borrar");
                 break;
             case "doble_generala":
                 btn1.setText("100");
                 btn2.setText("105");
+                btn3.setText("Tachar");
+                btn4.setText("Borrar");
                 break;
         }
     }
-
-
 }

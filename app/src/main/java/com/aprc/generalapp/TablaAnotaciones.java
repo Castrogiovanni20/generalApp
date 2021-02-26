@@ -55,30 +55,104 @@ public class TablaAnotaciones extends AppCompatActivity {
                 intArrayJug1[0] = 0;
             }
 
-            if (getIntent().getExtras().getInt("valor_jug1_opc2") != 0) {
-                Integer valor_jug1_opc2 = getIntent().getExtras().getInt("valor_jug1_opc2");
-                intArrayJug1[1] = valor_jug1_opc2;
-            }
 
-            if (getIntent().getExtras().getInt("valor_jug1_opc3") != 0) {
-                Integer valor_jug1_opc3 = getIntent().getExtras().getInt("valor_jug1_opc3");
-                intArrayJug1[2] = valor_jug1_opc3;
-            }
 
-            if (getIntent().getExtras().getInt("valor_jug1_opc4") != 0) {
-                Integer valor_jug1_opc4 = getIntent().getExtras().getInt("valor_jug1_opc4");
-                intArrayJug1[3] = valor_jug1_opc4;
-            }
+//            if (getIntent().getExtras().getInt("valor_jug1_opc2") != 0) {
+//                Integer valor_jug1_opc2 = getIntent().getExtras().getInt("valor_jug1_opc2");
+//                intArrayJug1[1] = valor_jug1_opc2;
+//            }
 
-            if (getIntent().getExtras().getInt("valor_jug1_opc5") != 0) {
-                Integer valor_jug1_opc5 = getIntent().getExtras().getInt("valor_jug1_opc5");
-                intArrayJug1[4] = valor_jug1_opc5;
-            }
 
-            if (getIntent().getExtras().getInt("valor_jug1_opc6") != 0) {
-                Integer valor_jug1_opc6 = getIntent().getExtras().getInt("valor_jug1_opc6");
-                intArrayJug1[5] = valor_jug1_opc6;
-            }
+//            if (!(getIntent().getExtras().getString(("valor_jug1_opc2")).equalsIgnoreCase("0"))
+//                    && (!getIntent().getExtras().getString(("valor_jug1_opc2")).equalsIgnoreCase("Tachar"))
+//                    && (!getIntent().getExtras().getString(("valor_jug1_opc2")).equalsIgnoreCase("Borrar"))) {
+//
+//                Integer valor_jug1_opc1 = Integer.parseInt(getIntent().getExtras().getString(("valor_jug1_opc2")));
+//
+//                intArrayJug1[1] = valor_jug1_opc1;
+//            } else if ((getIntent().getExtras().getString(("valor_jug1_opc2")).equalsIgnoreCase("Tachar"))) {
+//                intArrayJug1[1] = -1;
+//            } else if ((getIntent().getExtras().getString(("valor_jug1_opc2")).equalsIgnoreCase("Borrar"))) {
+//                intArrayJug1[1] = 0;
+//            }
+//
+//
+////            if (getIntent().getExtras().getInt("valor_jug1_opc3") != 0) {
+////                Integer valor_jug1_opc3 = getIntent().getExtras().getInt("valor_jug1_opc3");
+////                intArrayJug1[2] = valor_jug1_opc3;
+////            }
+//
+//            if (!(getIntent().getExtras().getString(("valor_jug1_opc3")).equalsIgnoreCase("0"))
+//                    && (!getIntent().getExtras().getString(("valor_jug1_opc3")).equalsIgnoreCase("Tachar"))
+//                    && (!getIntent().getExtras().getString(("valor_jug1_opc3")).equalsIgnoreCase("Borrar"))) {
+//
+//                Integer valor_jug1_opc3 = Integer.parseInt(getIntent().getExtras().getString(("valor_jug1_opc3")));
+//
+//                intArrayJug1[2] = valor_jug1_opc3;
+//            } else if ((getIntent().getExtras().getString(("valor_jug1_opc3")).equalsIgnoreCase("Tachar"))) {
+//                intArrayJug1[2] = -1;
+//            } else if ((getIntent().getExtras().getString(("valor_jug1_opc3")).equalsIgnoreCase("Borrar"))) {
+//                intArrayJug1[2] = 0;
+//            }
+//
+//
+////            if (getIntent().getExtras().getInt("valor_jug1_opc4") != 0) {
+////                Integer valor_jug1_opc4 = getIntent().getExtras().getInt("valor_jug1_opc4");
+////                intArrayJug1[3] = valor_jug1_opc4;
+////            }
+////
+//
+//            if (!(getIntent().getExtras().getString(("valor_jug1_opc4")).equalsIgnoreCase("0"))
+//                    && (!getIntent().getExtras().getString(("valor_jug1_opc4")).equalsIgnoreCase("Tachar"))
+//                    && (!getIntent().getExtras().getString(("valor_jug1_opc4")).equalsIgnoreCase("Borrar"))) {
+//
+//                Integer valor_jug1_opc4 = Integer.parseInt(getIntent().getExtras().getString(("valor_jug1_opc4")));
+//
+//                intArrayJug1[3] = valor_jug1_opc4;
+//            } else if ((getIntent().getExtras().getString(("valor_jug1_opc4")).equalsIgnoreCase("Tachar"))) {
+//                intArrayJug1[3] = -1;
+//            } else if ((getIntent().getExtras().getString(("valor_jug1_opc4")).equalsIgnoreCase("Borrar"))) {
+//                intArrayJug1[3] = 0;
+//            }
+//
+//
+////            if (getIntent().getExtras().getInt("valor_jug1_opc5") != 0) {
+////                Integer valor_jug1_opc5 = getIntent().getExtras().getInt("valor_jug1_opc5");
+////                intArrayJug1[4] = valor_jug1_opc5;
+////            }
+////
+//
+//            if (!(getIntent().getExtras().getString(("valor_jug1_opc5")).equalsIgnoreCase("0"))
+//                    && (!getIntent().getExtras().getString(("valor_jug1_opc5")).equalsIgnoreCase("Tachar"))
+//                    && (!getIntent().getExtras().getString(("valor_jug1_opc5")).equalsIgnoreCase("Borrar"))) {
+//
+//                Integer valor_jug1_opc5 = Integer.parseInt(getIntent().getExtras().getString(("valor_jug1_opc1")));
+//
+//                intArrayJug1[4] = valor_jug1_opc5;
+//            } else if ((getIntent().getExtras().getString(("valor_jug1_opc5")).equalsIgnoreCase("Tachar"))) {
+//                intArrayJug1[4] = -1;
+//            } else if ((getIntent().getExtras().getString(("valor_jug1_opc5")).equalsIgnoreCase("Borrar"))) {
+//                intArrayJug1[4] = 0;
+//            }
+//
+//
+////            if (getIntent().getExtras().getInt("valor_jug1_opc6") != 0) {
+////                Integer valor_jug1_opc6 = getIntent().getExtras().getInt("valor_jug1_opc6");
+////                intArrayJug1[5] = valor_jug1_opc6;
+////            }
+//
+//            if (!(getIntent().getExtras().getString(("valor_jug1_opc6")).equalsIgnoreCase("0"))
+//                    && (!getIntent().getExtras().getString(("valor_jug1_opc6")).equalsIgnoreCase("Tachar"))
+//                    && (!getIntent().getExtras().getString(("valor_jug1_opc6")).equalsIgnoreCase("Borrar"))) {
+//
+//                Integer valor_jug1_opc6 = Integer.parseInt(getIntent().getExtras().getString(("valor_jug1_opc6")));
+//
+//                intArrayJug1[5] = valor_jug1_opc6;
+//            } else if ((getIntent().getExtras().getString(("valor_jug1_opc6")).equalsIgnoreCase("Tachar"))) {
+//                intArrayJug1[5] = -1;
+//            } else if ((getIntent().getExtras().getString(("valor_jug1_opc6")).equalsIgnoreCase("Borrar"))) {
+//                intArrayJug1[5] = 0;
+//            }
 
             //----------------------desde aca son las opcionesJugadas - Jugador1---------------------------
 
@@ -467,6 +541,8 @@ public class TablaAnotaciones extends AppCompatActivity {
 
         if (intArrayJug1[1] != 0) {
             txtView_jug1_opc2.setText(String.valueOf(intArrayJug1[1]));
+        }else if (intArrayJug1[1] == -1) {
+            txtView_jug1_opc2.setText("X");
         }
 
         if (intArrayJug1[2] != 0) {

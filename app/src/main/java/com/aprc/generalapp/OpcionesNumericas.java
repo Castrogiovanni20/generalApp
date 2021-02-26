@@ -1,5 +1,6 @@
 package com.aprc.generalapp;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -81,6 +82,8 @@ public class OpcionesNumericas extends AppCompatActivity {
                 btn3.setText("6");
                 btn4.setText("8");
                 btn5.setText("10");
+                btn6.setText("Tachar");
+                btn7.setText("Borrar");
                 break;
             case "3":
                 btn1.setText("3");
@@ -88,6 +91,8 @@ public class OpcionesNumericas extends AppCompatActivity {
                 btn3.setText("9");
                 btn4.setText("12");
                 btn5.setText("15");
+                btn6.setText("Tachar");
+                btn7.setText("Borrar");
                 break;
             case "4":
                 btn1.setText("4");
@@ -95,6 +100,8 @@ public class OpcionesNumericas extends AppCompatActivity {
                 btn3.setText("12");
                 btn4.setText("16");
                 btn5.setText("20");
+                btn6.setText("Tachar");
+                btn7.setText("Borrar");
                 break;
             case "5":
                 btn1.setText("5");
@@ -102,6 +109,8 @@ public class OpcionesNumericas extends AppCompatActivity {
                 btn3.setText("15");
                 btn4.setText("20");
                 btn5.setText("25");
+                btn6.setText("Tachar");
+                btn7.setText("Borrar");
                 break;
             case "6":
                 btn1.setText("6");
@@ -109,9 +118,9 @@ public class OpcionesNumericas extends AppCompatActivity {
                 btn3.setText("18");
                 btn4.setText("24");
                 btn5.setText("30");
+                btn6.setText("Tachar");
+                btn7.setText("Borrar");
                 break;
         }
     }
-
-
 }
