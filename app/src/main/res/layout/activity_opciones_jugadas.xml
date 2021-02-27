@@ -35,13 +35,13 @@
 
 
         <Button
-            android:id="@+id/btnTachar"
+            android:id="@+id/btn3"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="Tachar" />
 
         <Button
-            android:id="@+id/btnBorrar"
+            android:id="@+id/btn4"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"

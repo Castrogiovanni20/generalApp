@@ -8,46 +8,44 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-//se declara la clase
 public class OpcionesNumericas extends AppCompatActivity {
-    private Button btn1, btn2, btn3, btn4, btn5, btn6, btn7;
+    private Button btn1, btn2, btn3, btn4, btn5;
 
-    //metodo principal e indispensable de todas las clases
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opciones_numericas);
 
-        //declaracion de los botones
         btn1 = findViewById(R.id.btn1);
         btn2 = findViewById(R.id.btn2);
         btn3 = findViewById(R.id.btn3);
         btn4 = findViewById(R.id.btn4);
         btn5 = findViewById(R.id.btn5);
-        btn6 = findViewById(R.id.btnTachar);
-        btn7 = findViewById(R.id.btnBorrar);
 
-
-        //declaracion de las variables
         String opcion = getIntent().getExtras().getString("opcion");
         String jugador = getIntent().getExtras().getString("jugador");
 
+<<<<<<< HEAD
 
 
         //llamada al metodo:
+=======
+>>>>>>> parent of 155612d... se desarrollo todos los elementos de opcionesJugadas
         setearValoresBotones(opcion);
 
-        //llamada al metodo:
         enviarValor(btn1, opcion, jugador);
         enviarValor(btn2, opcion, jugador);
         enviarValor(btn3, opcion, jugador);
         enviarValor(btn4, opcion, jugador);
         enviarValor(btn5, opcion, jugador);
+<<<<<<< HEAD
         enviarValor(btn6, opcion, jugador);
         enviarValor(btn7, opcion, jugador);
+=======
+
+>>>>>>> parent of 155612d... se desarrollo todos los elementos de opcionesJugadas
     }
 
-    //metodo: al apretar el boton dentro de las opciones de puntaje
     private void enviarValor(final Button button, final String opcion, final String jugador){
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,10 +58,13 @@ public class OpcionesNumericas extends AppCompatActivity {
         });
     }
 
+<<<<<<< HEAD
 //---------------------------------------------------------------------------------------------------
 
 
     //este metodo es el que muestra el valor correpondiente de cada boton en cada opcion de juego posible
+=======
+>>>>>>> parent of 155612d... se desarrollo todos los elementos de opcionesJugadas
     public void setearValoresBotones(String opcion){
         switch (opcion) {
             case "1":
