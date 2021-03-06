@@ -36,7 +36,7 @@ public class TablaAnotaciones extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabla_anotaciones);
 
-        if (getIntent().getExtras() != null){
+        if (getIntent().getExtras() != null) {
 
             //asignacion de valores en los arrays de cada jugador
             // Jugador 1
@@ -141,28 +141,28 @@ public class TablaAnotaciones extends AppCompatActivity {
 
 
         //Mapea el valor del array en el elemento del layout
-        // Jug 1
+        // ------------------------Jugador 1-------------------------------------------------------------------
         mapearValor(intArrayJug1, 0, txtView_jug1_opc1);
         mapearValor(intArrayJug1, 1, txtView_jug1_opc2);
         mapearValor(intArrayJug1, 2, txtView_jug1_opc3);
         mapearValor(intArrayJug1, 3, txtView_jug1_opc4);
         mapearValor(intArrayJug1, 4, txtView_jug1_opc5);
         mapearValor(intArrayJug1, 5, txtView_jug1_opc6);
-        //------------------A desde aca opcionesJugadas - jugador1-------------------------------------------------
+        //--------------------------- opcionesJugadas - jugador1-------------------------------------------------
         mapearValor(intArrayJug1, 6, txtView_jug1_escalera);
         mapearValor(intArrayJug1, 7, txtView_jug1_full);
         mapearValor(intArrayJug1, 8, txtView_jug1_poker);
         mapearValor(intArrayJug1, 9, txtView_jug1_generala);
         mapearValor(intArrayJug1, 10, txtView_jug1_doble_generala);
         mapearValor(intArrayJug1, 11, txtView_jug1_total);
-        //---------------Jugador 2------------------------------------------------------
+        //-------------------------Jugador 2-----------------------------------------------------------------------
         mapearValor(intArrayJug2, 0, txtView_jug2_opc1);
         mapearValor(intArrayJug2, 1, txtView_jug2_opc2);
         mapearValor(intArrayJug2, 2, txtView_jug2_opc3);
         mapearValor(intArrayJug2, 3, txtView_jug2_opc4);
         mapearValor(intArrayJug2, 4, txtView_jug2_opc5);
         mapearValor(intArrayJug2, 5, txtView_jug2_opc6);
-        //------------------A desde aca opcionesJugadas - jugador2-------------------------------------------------
+        //---------------------------- opcionesJugadas - jugador2-------------------------------------------------
         mapearValor(intArrayJug2, 6, txtView_jug2_escalera);
         mapearValor(intArrayJug2, 7, txtView_jug2_full);
         mapearValor(intArrayJug2, 8, txtView_jug2_poker);
@@ -204,10 +204,14 @@ public class TablaAnotaciones extends AppCompatActivity {
         });
     }
 
+//----------------------------------------------------------------------------------------------------------------------
+    //metodo que recibe la clave como String y la convierte a int -- funciona sin tachar ni borrar
     private void asignarValor(String clave, int[] intArrayJug, int i) {
-        if ((getIntent().getExtras().getInt((clave)) != 0)) {
-            Integer valor_jug_opc = getIntent().getExtras().getInt(clave);
-            intArrayJug[i] = valor_jug_opc;
+
+        if ((getIntent().getExtras().getString(clave) != (null))) {
+            String valor_jug_opc = getIntent().getExtras().getString(clave);
+            Integer valor_jug_opc_int = Integer.parseInt(valor_jug_opc);
+            intArrayJug[i] = valor_jug_opc_int;
         }
     }
 

@@ -20,8 +20,8 @@ public class OpcionesJugadas extends AppCompatActivity {
         //declaracion de los botones
         btn1 = findViewById(R.id.btn1);
         btn2 = findViewById(R.id.btn2);
-        btn3 = findViewById(R.id.btn3);
-        btn4 = findViewById(R.id.btn4);
+        btn3 = findViewById(R.id.btnTachar);
+        btn4 = findViewById(R.id.btnBorrar);
 
         //declaracion de las variables
         String opcion = getIntent().getExtras().getString("opcion");
@@ -33,12 +33,12 @@ public class OpcionesJugadas extends AppCompatActivity {
         //llamada al metodo:
         enviarValor(btn1, opcion, jugador);
         enviarValor(btn2, opcion, jugador);
-        //enviarValor(btn3, opcion, jugador);
-        //enviarValor(btn4, opcion, jugador);
+        enviarValor(btn3, opcion, jugador);
+        enviarValor(btn4, opcion, jugador);
     }
 
 
-    //----------desde aca A-------------------------------------------------------------
+    //------------------------------------------------------------------------------------------------------------------------------------
 
     //metodo: al apretar el boton dentro de las opciones de puntaje
     private void enviarValor(final Button button, final String opcion, final String jugador){
@@ -46,17 +46,17 @@ public class OpcionesJugadas extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), TablaAnotaciones.class);
-                intent.putExtra("valor_jug".concat(jugador).concat("_").concat(opcion), Integer.parseInt(button.getText().toString()));
-                //intent.putExtra("valor_jug".concat(jugador).concat("_opc").concat(opcion), Integer.parseInt(button.getText().toString()));
+                //clave para Int
+                //intent.putExtra("valor_jug".concat(jugador).concat("_").concat(opcion), Integer.parseInt(button.getText().toString()));
+
+                //clave para String
+                intent.putExtra("valor_jug".concat(jugador).concat("_").concat(opcion), button.getText().toString());
                 startActivity(intent);
             }
         });
     }
 
-
-
-    //--------------hasta aca A----------------------------------------------------
-
+    //-----------------------------------------------------------------------------------------------------------------------------------------
 
     //este metodo es el que muestra el valor correpondiente de cada boton en cada opcion de juego posible
     public void setearValoresBotones(String opcion){
@@ -64,25 +64,34 @@ public class OpcionesJugadas extends AppCompatActivity {
             case "escalera":
                 btn1.setText("20");
                 btn2.setText("25");
+                btn3.setText("Tachar");
+                btn4.setText("Borrar");
                 break;
             case "full":
                 btn1.setText("30");
                 btn2.setText("35");
+                btn3.setText("Tachar");
+                btn4.setText("Borrar");
                 break;
             case "poker":
                 btn1.setText("40");
                 btn2.setText("45");
+                btn3.setText("Tachar");
+                btn4.setText("Borrar");
                 break;
             case "generala":
                 btn1.setText("50");
                 btn2.setText("55");
+                btn3.setText("Tachar");
+                btn4.setText("Borrar");
                 break;
             case "doble_generala":
                 btn1.setText("100");
                 btn2.setText("105");
+                btn3.setText("Tachar");
+                btn4.setText("Borrar");
                 break;
         }
     }
-
 
 }

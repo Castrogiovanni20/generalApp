@@ -42,8 +42,8 @@ public class OpcionesNumericas extends AppCompatActivity {
         enviarValor(btn3, opcion, jugador);
         enviarValor(btn4, opcion, jugador);
         enviarValor(btn5, opcion, jugador);
-        //tachar(btn6, opcion, jugador);
-
+        enviarValor(btn6, opcion, jugador);
+        enviarValor(btn7, opcion, jugador);
     }
 
     //metodo: al apretar el boton dentro de las opciones de puntaje
@@ -52,23 +52,21 @@ public class OpcionesNumericas extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), TablaAnotaciones.class);
-                intent.putExtra("valor_jug".concat(jugador).concat("_opc").concat(opcion), Integer.parseInt(button.getText().toString()));
+
+                //para enviar la clave como int
+                //intent.putExtra("valor_jug".concat(jugador).concat("_opc").concat(opcion), Integer.parseInt(button.getText().toString()));
+
+                //para enviar la clave como String
+                //intent.putExtra("valor_jug".concat(jugador).concat("_opc").concat(opcion), button.getText().toString());
+                //String pruebaClave = "valor_jug".concat(jugador).concat("_opc").concat(opcion);
+                //Log.d("pruebaCl", pruebaClave);
+                intent.putExtra("valor_jug".concat(jugador).concat("_opc").concat(opcion),button.getText().toString());
                 startActivity(intent);
             }
         });
     }
 
-//    private void tachar(final Button button, final String opcion, final String jugador){
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(getApplicationContext(), TablaAnotaciones.class);
-//                intent.putExtra("valor_jug".concat(jugador).concat("_opc").concat(opcion), "tachar");
-//                startActivity(intent);
-//            }
-//        });
-//    }
-
+//------------------------------------------------------------------------------------------------------------------------------------------------------
 
     //este metodo es el que muestra el valor correpondiente de cada boton en cada opcion de juego posible
     public void setearValoresBotones(String opcion){
@@ -79,6 +77,8 @@ public class OpcionesNumericas extends AppCompatActivity {
                 btn3.setText("3");
                 btn4.setText("4");
                 btn5.setText("5");
+                btn6.setText("999");
+                btn7.setText("-5");
                 break;
             case "2":
                 btn1.setText("2");
@@ -86,6 +86,8 @@ public class OpcionesNumericas extends AppCompatActivity {
                 btn3.setText("6");
                 btn4.setText("8");
                 btn5.setText("10");
+                btn6.setText("999");
+                btn7.setText("-5");
                 break;
             case "3":
                 btn1.setText("3");
@@ -93,6 +95,8 @@ public class OpcionesNumericas extends AppCompatActivity {
                 btn3.setText("9");
                 btn4.setText("12");
                 btn5.setText("15");
+                btn6.setText("999");
+                btn7.setText("-5");
                 break;
             case "4":
                 btn1.setText("4");
@@ -100,6 +104,8 @@ public class OpcionesNumericas extends AppCompatActivity {
                 btn3.setText("12");
                 btn4.setText("16");
                 btn5.setText("20");
+                btn6.setText("999");
+                btn7.setText("-5");
                 break;
             case "5":
                 btn1.setText("5");
@@ -107,6 +113,8 @@ public class OpcionesNumericas extends AppCompatActivity {
                 btn3.setText("15");
                 btn4.setText("20");
                 btn5.setText("25");
+                btn6.setText("999");
+                btn7.setText("-5");
                 break;
             case "6":
                 btn1.setText("6");
@@ -114,9 +122,10 @@ public class OpcionesNumericas extends AppCompatActivity {
                 btn3.setText("18");
                 btn4.setText("24");
                 btn5.setText("30");
+                btn6.setText("999");
+                btn7.setText("-5");
                 break;
         }
     }
-
 
 }
