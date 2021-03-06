@@ -172,9 +172,20 @@ public class TablaAnotaciones extends AppCompatActivity {
     }
 
     //------------------------METODOS--------------------------------------------------------------
+//metodo original
+//    private void mapearValor(int[] intArrayJug, int i, TextView txtView_jug_opc) {
+//        if (intArrayJug[i] != 0) {
+//            txtView_jug_opc.setText(String.valueOf(intArrayJug[i]));
+//        }
+//    }
+
     private void mapearValor(int[] intArrayJug, int i, TextView txtView_jug_opc) {
         if (intArrayJug[i] != 0) {
-            txtView_jug_opc.setText(String.valueOf(intArrayJug[i]));
+            if (intArrayJug[i] == -1) {
+                txtView_jug_opc.setText("X");
+            } else {
+                txtView_jug_opc.setText(String.valueOf(intArrayJug[i]));
+            }
         }
     }
 
@@ -204,15 +215,34 @@ public class TablaAnotaciones extends AppCompatActivity {
         });
     }
 
-//----------------------------------------------------------------------------------------------------------------------
+
     //metodo que recibe la clave como String y la convierte a int -- funciona sin tachar ni borrar
     private void asignarValor(String clave, int[] intArrayJug, int i) {
+        String valor_jug_opc = getIntent().getExtras().getString(clave);
 
-        if ((getIntent().getExtras().getString(clave) != (null))) {
-            String valor_jug_opc = getIntent().getExtras().getString(clave);
-            Integer valor_jug_opc_int = Integer.parseInt(valor_jug_opc);
-            intArrayJug[i] = valor_jug_opc_int;
+        if (valor_jug_opc != (null)) {
+            if (!(valor_jug_opc.equals("Tachar")) && !(valor_jug_opc.equals("Borrar"))) {
+                Integer valor_jug_opc_int = Integer.parseInt(valor_jug_opc);
+                intArrayJug[i] = valor_jug_opc_int;
+            } else {
+                if (valor_jug_opc.equals("Tachar")) {
+                    intArrayJug[i] = -1;
+                } else {
+                    intArrayJug[i] = 0;
+                }
+            }
         }
     }
+
+//------------------------------------------Metodo original----------------------------------------------------------------------------
+//    //metodo que recibe la clave como String y la convierte a int -- funciona sin tachar ni borrar
+//    private void asignarValor(String clave, int[] intArrayJug, int i) {
+//
+//        if ((getIntent().getExtras().getString(clave) != (null))) {
+//            String valor_jug_opc = getIntent().getExtras().getString(clave);
+//            Integer valor_jug_opc_int = Integer.parseInt(valor_jug_opc);
+//            intArrayJug[i] = valor_jug_opc_int;
+//        }
+//    }
 
 }
