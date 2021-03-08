@@ -106,10 +106,28 @@ public class TablaAnotaciones extends AppCompatActivity {
         btnSumar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), PodioGanador.class);
-                startActivity(intent);
+
+                int total1 = sumarValores(intArrayJug1);
+                intArrayJug1[11]= total1;
+
+                int total2 = sumarValores(intArrayJug2);
+                intArrayJug2[11]= total2;
+
+
+                //Intent intent = new Intent(getApplicationContext(), PodioGanador.class);
+                //startActivity(intent);
             }
         });
+
+        //-------------------------------------------metodo original----------------------------------------------------------
+        //Marca el evento luego de click en el boton sumar - luego de realizar la suma y establecer ganador/es
+//        btnSumar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getApplicationContext(), PodioGanador.class);
+//                startActivity(intent);
+//            }
+//        });
 
         //cuando se presiona el elemento de la tabla correspondiente se realiza un evento y vincula con la
         // clase correpondiente sea OpcionesNumericas u OpcionesJugadas
@@ -216,7 +234,7 @@ public class TablaAnotaciones extends AppCompatActivity {
     }
 
 
-    //metodo que recibe la clave como String y la convierte a int -- funciona sin tachar ni borrar
+    //metodo que recibe la clave como String y la convierte a int para asignar los valores del Array
     private void asignarValor(String clave, int[] intArrayJug, int i) {
         String valor_jug_opc = getIntent().getExtras().getString(clave);
 
@@ -234,15 +252,33 @@ public class TablaAnotaciones extends AppCompatActivity {
         }
     }
 
-//------------------------------------------Metodo original----------------------------------------------------------------------------
-//    //metodo que recibe la clave como String y la convierte a int -- funciona sin tachar ni borrar
-//    private void asignarValor(String clave, int[] intArrayJug, int i) {
+    //metodo sumarValores
+    private int sumarValores (int [ ] intArrayJug){
+        int acumulador=0;
+
+        for (int i = 0; i < intArrayJug.length-1; i++) {
+            int valor = intArrayJug[i];
+            if (valor!=-1){
+                acumulador = acumulador + valor;
+            }
+        }
+        return acumulador;
+    }
+
+
+//    //metodo sumarValores ------------------------------ metodo original-----------------------------------------------
+//    private int sumarValores (int [ ] intArrayJug){
+//        int acumulador=0;
 //
-//        if ((getIntent().getExtras().getString(clave) != (null))) {
-//            String valor_jug_opc = getIntent().getExtras().getString(clave);
-//            Integer valor_jug_opc_int = Integer.parseInt(valor_jug_opc);
-//            intArrayJug[i] = valor_jug_opc_int;
+//        for (int i = 0; i < intArrayJug.length-1; i++) {
+//            int valor = intArrayJug[i];
+//            if (valor==-1){
+//                acumulador = acumulador;
+//            }else{
+//                acumulador = acumulador + valor;
+//            }
 //        }
+//        return acumulador;
 //    }
 
 }
