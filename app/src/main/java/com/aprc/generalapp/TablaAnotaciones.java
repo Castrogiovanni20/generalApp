@@ -207,6 +207,14 @@ public class TablaAnotaciones extends AppCompatActivity {
         }
     }
 
+    private void elegirValor (final String opcion, final String jugador){
+    if (intArrayJug1[0]!=0)  {
+
+    }
+    }
+
+
+
     private void seleccionarPuntajeNumericas(TextView txtView_jug_opc, final String opcion, final String jugador) {
         txtView_jug_opc.setOnClickListener(new View.OnClickListener() {
             @Override
