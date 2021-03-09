@@ -109,9 +109,11 @@ public class TablaAnotaciones extends AppCompatActivity {
 
                 int total1 = sumarValores(intArrayJug1);
                 intArrayJug1[11]= total1;
+                txtView_jug1_total.setText(String.valueOf(total1));
 
                 int total2 = sumarValores(intArrayJug2);
                 intArrayJug2[11]= total2;
+                txtView_jug2_total.setText(String.valueOf(total2));
 
 
                 //Intent intent = new Intent(getApplicationContext(), PodioGanador.class);
