@@ -31,19 +31,35 @@ public class OpcionesNumericas extends AppCompatActivity {
         //declaracion de las variables
         String opcion = getIntent().getExtras().getString("opcion");
         String jugador = getIntent().getExtras().getString("jugador");
+        boolean desactivarBotones = getIntent().getExtras().getBoolean("desactivarBotones");
 
 
         //llamada al metodo:
         setearValoresBotones(opcion);
 
         //llamada al metodo:
-        enviarValor(btn1, opcion, jugador);
-        enviarValor(btn2, opcion, jugador);
-        enviarValor(btn3, opcion, jugador);
-        enviarValor(btn4, opcion, jugador);
-        enviarValor(btn5, opcion, jugador);
-        enviarValor(btn6, opcion, jugador);
+
+        //habilitarBoton(opcion, jugador, desactivarBotones);
+        habilitarBoton(btn1, opcion, jugador, desactivarBotones);
+        habilitarBoton(btn2, opcion, jugador, desactivarBotones);
+        habilitarBoton(btn3, opcion, jugador, desactivarBotones);
+        habilitarBoton(btn4, opcion, jugador, desactivarBotones);
+        habilitarBoton(btn5, opcion, jugador, desactivarBotones);
+        habilitarBoton(btn6, opcion, jugador, desactivarBotones);
+
+        //metodo para que siempre quede activado el boton borrar
         enviarValor(btn7, opcion, jugador);
+    }
+
+
+    //Metodo habilitar boton: si la posicion del array esta vacia envia el valor,
+    // si no desactiva todos los botones exceptuando el boton de borrar.
+    public void habilitarBoton(Button btn, String opcion, String jugador, boolean desactivarBotones) {
+        if (desactivarBotones != true){
+            enviarValor(btn, opcion, jugador);
+        }else{
+            desactivarBotones();
+        }
     }
 
     //metodo: al apretar el boton dentro de las opciones de puntaje
@@ -66,6 +82,16 @@ public class OpcionesNumericas extends AppCompatActivity {
         });
     }
 
+    //Metodo desactivar Botones
+
+    public void desactivarBotones ( ){
+        btn1.setEnabled(false);
+        btn2.setEnabled(false);
+        btn3.setEnabled(false);
+        btn4.setEnabled(false);
+        btn5.setEnabled(false);
+        btn6.setEnabled(false);
+    }
 //------------------------------------------------------------------------------------------------------------------------------------------------------
 
     //este metodo es el que muestra el valor correpondiente de cada boton en cada opcion de juego posible

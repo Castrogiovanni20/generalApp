@@ -36,7 +36,40 @@ public class TablaAnotaciones extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabla_anotaciones);
 
+
+
+        //vincular las variables de los juegos con los elementos de los layout (de tablaDeAnotacciones)
+        // Variables jugador 1
+        txtView_jug1_opc1 = findViewById(R.id.txtView_jug1_opc1);
+        txtView_jug1_opc2 = findViewById(R.id.txtView_jug1_opc2);
+        txtView_jug1_opc3 = findViewById(R.id.txtView_jug1_opc3);
+        txtView_jug1_opc4 = findViewById(R.id.txtView_jug1_opc4);
+        txtView_jug1_opc5 = findViewById(R.id.txtView_jug1_opc5);
+        txtView_jug1_opc6 = findViewById(R.id.txtView_jug1_opc6);
+        txtView_jug1_escalera = findViewById(R.id.txtView_jug1_escalera);
+        txtView_jug1_full = findViewById(R.id.txtView_jug1_full);
+        txtView_jug1_poker = findViewById(R.id.txtView_jug1_poker);
+        txtView_jug1_generala = findViewById(R.id.txtView_jug1_generala);
+        txtView_jug1_doble_generala = findViewById(R.id.txtView_jug1_doble_generala);
+        txtView_jug1_total = findViewById(R.id.txtView_jug1_total);
+
+        // Variables jugador 2
+        txtView_jug2_opc1 = findViewById(R.id.txtView_jug2_opc1);
+        txtView_jug2_opc2 = findViewById(R.id.txtView_jug2_opc2);
+        txtView_jug2_opc3 = findViewById(R.id.txtView_jug2_opc3);
+        txtView_jug2_opc4 = findViewById(R.id.txtView_jug2_opc4);
+        txtView_jug2_opc5 = findViewById(R.id.txtView_jug2_opc5);
+        txtView_jug2_opc6 = findViewById(R.id.txtView_jug2_opc6);
+        txtView_jug2_escalera = findViewById(R.id.txtView_jug2_escalera);
+        txtView_jug2_full = findViewById(R.id.txtView_jug2_full);
+        txtView_jug2_poker = findViewById(R.id.txtView_jug2_poker);
+        txtView_jug2_generala = findViewById(R.id.txtView_jug2_generala);
+        txtView_jug2_doble_generala = findViewById(R.id.txtView_jug2_doble_generala);
+        txtView_jug2_total = findViewById(R.id.txtView_jug2_total);
+
+
         if (getIntent().getExtras() != null) {
+
 
             //asignacion de valores en los arrays de cada jugador
             // Jugador 1
@@ -69,38 +102,11 @@ public class TablaAnotaciones extends AppCompatActivity {
             asignarValor("valor_jug2_doble_generala", intArrayJug2, 10);
             asignarValor("valor_jug2_total", intArrayJug2, 11);
         }
-//--------------------------hasta aca----------------------------------------------
+//---------------------------------------------------------------------------------------------------------
         //Boton sumar
         btnSumar = findViewById(R.id.btnSumar);
 
-        //vincular las variables de los juegos con los elementos de los layout (de tablaDeAnotacciones)
-        // Variables jugador 1
-        txtView_jug1_opc1 = findViewById(R.id.txtView_jug1_opc1);
-        txtView_jug1_opc2 = findViewById(R.id.txtView_jug1_opc2);
-        txtView_jug1_opc3 = findViewById(R.id.txtView_jug1_opc3);
-        txtView_jug1_opc4 = findViewById(R.id.txtView_jug1_opc4);
-        txtView_jug1_opc5 = findViewById(R.id.txtView_jug1_opc5);
-        txtView_jug1_opc6 = findViewById(R.id.txtView_jug1_opc6);
-        txtView_jug1_escalera = findViewById(R.id.txtView_jug1_escalera);
-        txtView_jug1_full = findViewById(R.id.txtView_jug1_full);
-        txtView_jug1_poker = findViewById(R.id.txtView_jug1_poker);
-        txtView_jug1_generala = findViewById(R.id.txtView_jug1_generala);
-        txtView_jug1_doble_generala = findViewById(R.id.txtView_jug1_doble_generala);
-        txtView_jug1_total = findViewById(R.id.txtView_jug1_total);
 
-        // Variables jugador 2
-        txtView_jug2_opc1 = findViewById(R.id.txtView_jug2_opc1);
-        txtView_jug2_opc2 = findViewById(R.id.txtView_jug2_opc2);
-        txtView_jug2_opc3 = findViewById(R.id.txtView_jug2_opc3);
-        txtView_jug2_opc4 = findViewById(R.id.txtView_jug2_opc4);
-        txtView_jug2_opc5 = findViewById(R.id.txtView_jug2_opc5);
-        txtView_jug2_opc6 = findViewById(R.id.txtView_jug2_opc6);
-        txtView_jug2_escalera = findViewById(R.id.txtView_jug2_escalera);
-        txtView_jug2_full = findViewById(R.id.txtView_jug2_full);
-        txtView_jug2_poker = findViewById(R.id.txtView_jug2_poker);
-        txtView_jug2_generala = findViewById(R.id.txtView_jug2_generala);
-        txtView_jug2_doble_generala = findViewById(R.id.txtView_jug2_doble_generala);
-        txtView_jug2_total = findViewById(R.id.txtView_jug2_total);
 
         //Marca el evento luego de click en el boton sumar - luego de realizar la suma y establecer ganador/es
         btnSumar.setOnClickListener(new View.OnClickListener() {
@@ -120,16 +126,6 @@ public class TablaAnotaciones extends AppCompatActivity {
                 //startActivity(intent);
             }
         });
-
-        //-------------------------------------------metodo original----------------------------------------------------------
-        //Marca el evento luego de click en el boton sumar - luego de realizar la suma y establecer ganador/es
-//        btnSumar.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(getApplicationContext(), PodioGanador.class);
-//                startActivity(intent);
-//            }
-//        });
 
         //cuando se presiona el elemento de la tabla correspondiente se realiza un evento y vincula con la
         // clase correpondiente sea OpcionesNumericas u OpcionesJugadas
@@ -189,16 +185,27 @@ public class TablaAnotaciones extends AppCompatActivity {
         mapearValor(intArrayJug2, 9, txtView_jug2_generala);
         mapearValor(intArrayJug2, 10, txtView_jug2_doble_generala);
         mapearValor(intArrayJug2, 11, txtView_jug2_total);
+
+
     }
 
-    //------------------------METODOS--------------------------------------------------------------
-//metodo original
-//    private void mapearValor(int[] intArrayJug, int i, TextView txtView_jug_opc) {
-//        if (intArrayJug[i] != 0) {
-//            txtView_jug_opc.setText(String.valueOf(intArrayJug[i]));
-//        }
-//    }
 
+
+    //------------------------METODOS--------------------------------------------------------------
+
+
+    //un metodo para que deshabilite en onclick una vez que hay un valor establecido en el onclick
+    private void desactivarBoton (int[] intArrayJug, int i, TextView txtView_jug_opc){
+        if (intArrayJug[i]!=0)  {
+            //txtView_jug_opc.setEnabled(false);
+            txtView_jug_opc.setClickable(false);
+
+        }
+    }
+
+    //----------------------------------------------------------------------------------------------
+
+    //Mapea los valores en los casilleros - si es tachado coloca una "X"
     private void mapearValor(int[] intArrayJug, int i, TextView txtView_jug_opc) {
         if (intArrayJug[i] != 0) {
             if (intArrayJug[i] == -1) {
@@ -209,26 +216,32 @@ public class TablaAnotaciones extends AppCompatActivity {
         }
     }
 
-    private void elegirValor (final String opcion, final String jugador){
-    if (intArrayJug1[0]!=0)  {
-
-    }
-    }
-
-
 
     private void seleccionarPuntajeNumericas(TextView txtView_jug_opc, final String opcion, final String jugador) {
         txtView_jug_opc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), OpcionesNumericas.class);
+                boolean desactivarBotones=false;
+
+                if (jugador=="1"){
+                    if (intArrayJug1[Integer.parseInt(opcion)-1]!=0){
+                        desactivarBotones=true;
+                    }
+                }else{
+                    if (intArrayJug2[Integer.parseInt(opcion)-1]!=0){
+                        desactivarBotones=true;
+                    }
+                }
                 //envia valores a la otra clase
                 intent.putExtra("opcion", opcion);
                 intent.putExtra("jugador", jugador);
+                intent.putExtra("desactivarBotones", desactivarBotones);
                 startActivity(intent);
             }
         });
     }
+
 
     private void seleccionarPuntajeJugadas(TextView txtView_jug_opc, final String opcion, final String jugador) {
         txtView_jug_opc.setOnClickListener(new View.OnClickListener() {
@@ -243,8 +256,20 @@ public class TablaAnotaciones extends AppCompatActivity {
         });
     }
 
+    //metodo original---------------------------
+//    private void seleccionarPuntajeJugadas(TextView txtView_jug_opc, final String opcion, final String jugador) {
+//        txtView_jug_opc.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getApplicationContext(), OpcionesJugadas.class);
+//                //envia valores a la otra clase
+//                intent.putExtra("opcion", opcion);
+//                intent.putExtra("jugador", jugador);
+//                startActivity(intent);
+//            }
+//        });
+//    }
 
-    //metodo que recibe la clave como String y la convierte a int para asignar los valores del Array
     private void asignarValor(String clave, int[] intArrayJug, int i) {
         String valor_jug_opc = getIntent().getExtras().getString(clave);
 
@@ -276,19 +301,8 @@ public class TablaAnotaciones extends AppCompatActivity {
     }
 
 
-//    //metodo sumarValores ------------------------------ metodo original-----------------------------------------------
-//    private int sumarValores (int [ ] intArrayJug){
-//        int acumulador=0;
-//
-//        for (int i = 0; i < intArrayJug.length-1; i++) {
-//            int valor = intArrayJug[i];
-//            if (valor==-1){
-//                acumulador = acumulador;
-//            }else{
-//                acumulador = acumulador + valor;
-//            }
-//        }
-//        return acumulador;
-//    }
+    //metodo Reiniciar
+    public void reiniciar (){
 
+    }
 }

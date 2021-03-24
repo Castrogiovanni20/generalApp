@@ -454,5 +454,12 @@
         android:layout_marginLeft="30dp"
         android:text="Sumar" />
 
+    <Button
+        android:id="@+id/btnReiniciar"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="240dp"
+        android:text="Reiniciar" />
+
 
 </LinearLayout>
