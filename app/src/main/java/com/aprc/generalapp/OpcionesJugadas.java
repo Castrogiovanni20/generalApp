@@ -26,17 +26,35 @@ public class OpcionesJugadas extends AppCompatActivity {
         //declaracion de las variables
         String opcion = getIntent().getExtras().getString("opcion");
         String jugador = getIntent().getExtras().getString("jugador");
+        boolean desactivarBotones = getIntent().getExtras().getBoolean("desactivarBotones");
 
         //llamada al metodo:
         setearValoresBotones(opcion);
 
         //llamada al metodo:
-        enviarValor(btn1, opcion, jugador);
-        enviarValor(btn2, opcion, jugador);
-        enviarValor(btn3, opcion, jugador);
+        habilitarBoton(btn1, opcion, jugador, desactivarBotones);
+        habilitarBoton(btn2, opcion, jugador, desactivarBotones);
+        habilitarBoton(btn3, opcion, jugador, desactivarBotones);
+
+        //se envia valor del boton 4 que es "Borrar" y queda siempre habilitado.
         enviarValor(btn4, opcion, jugador);
     }
 
+    //Metodo habilitar boton: si la posicion del array esta vacia envia el valor,
+    // si no desactiva todos los botones exceptuando el boton de borrar.
+    public void habilitarBoton(Button btn, String opcion, String jugador, boolean desactivarBotones) {
+        if (desactivarBotones != true){
+            enviarValor(btn, opcion, jugador);
+        }else{
+            desactivarBotones();
+        }
+    }
+
+    public void desactivarBotones ( ){
+        btn1.setEnabled(false);
+        btn2.setEnabled(false);
+        btn3.setEnabled(false);
+    }
 
     //------------------------------------------------------------------------------------------------------------------------------------
 

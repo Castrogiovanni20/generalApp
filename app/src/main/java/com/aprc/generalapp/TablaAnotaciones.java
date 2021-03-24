@@ -248,9 +248,43 @@ public class TablaAnotaciones extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), OpcionesJugadas.class);
+
+                boolean desactivarBotones=false;
+                int opcionJ=-1;
+
+                switch (opcion){
+                    case "escalera":
+                        opcionJ= 6;
+                        break;
+                    case "full":
+                        opcionJ=7;
+                        break;
+                    case "poker":
+                        opcionJ=8;
+                        break;
+                    case "generala":
+                        opcionJ=9;
+                        break;
+                    case "doble_generala":
+                        opcionJ=10;
+                        break;
+                }
+
+                if (jugador=="1"){
+                    if (intArrayJug1[opcionJ]!=0){
+                        //if (intArrayJug1[Integer.parseInt(opcionJ)]!=0){
+                            desactivarBotones=true;
+                        }
+                    } else{
+                    if (intArrayJug2[opcionJ]!=0){
+                        //if (intArrayJug2[Integer.parseInt(opcionJ)]!=0){
+                        desactivarBotones=true;
+                    }
+                }
                 //envia valores a la otra clase
                 intent.putExtra("opcion", opcion);
                 intent.putExtra("jugador", jugador);
+                intent.putExtra("desactivarBotones", desactivarBotones);
                 startActivity(intent);
             }
         });
